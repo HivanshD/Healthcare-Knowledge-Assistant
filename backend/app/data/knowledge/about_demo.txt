@@ -1,0 +1,1 @@
+MedAgent AI is a technical demonstration showing how retrieval-augmented generation (RAG) can ground large language model outputs on trusted, local documents. It uses a vector database (FAISS) for similarity search over embeddings, then prompts a generator model with the retrieved context. This demo is not a substitute for professional advice of any kind.

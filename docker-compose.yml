@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+    environment:
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
+      - INDEX_PATH=backend/app/data/index/faiss_index
+      - GEN_MODEL=google/flan-t5-base
+      - MAX_NEW_TOKENS=256
+      - TOP_P=0.95
+      - TEMPERATURE=0.2
+    command: uvicorn backend.app.main:app --host 0.0.0.0 --port 8000
+
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.ui
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+    environment:
+      - UI_API_BASE=http://api:8000
+    volumes:
+      - ./:/app

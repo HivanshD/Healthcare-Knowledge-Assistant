@@ -1,0 +1,67 @@
+:root {
+  --bg: #f8f9fa;
+  --panel: #ffffff;
+  --border: #e0e0e0;
+  --text: #1c1c1c;
+  --muted: #6c757d;
+  --accent: #2F80ED; /* nice professional blue */
+}
+
+html, body, [data-testid="stAppViewContainer"] {
+  background: var(--bg) !important;
+  color: var(--text);
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 6px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+
+.brand-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.brand-subtitle {
+  color: var(--muted);
+  margin-top: 2px;
+  font-size: 13px;
+}
+
+/* Answer card */
+.answer-box {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 15px;
+  line-height: 1.6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Sources */
+.source-item {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.src-id {
+  color: var(--muted);
+}
+
+.placeholder {
+  color: var(--muted);
+  border: 1px dashed var(--border);
+  padding: 18px;
+  border-radius: 8px;
+}
