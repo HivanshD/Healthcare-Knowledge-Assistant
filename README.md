@@ -1,6 +1,4 @@
-# MedAgent AI
-
-A retrieval-augmented, multi-agent healthcare assistant.
+# A retrieval-augmented, multi-agent healthcare assistant.
 
 ## What this does
 - Ingests text documents into a FAISS **vector database** using Sentence-Transformers embeddings.
