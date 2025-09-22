@@ -11,7 +11,7 @@ A retrieval-augmented, multi-agent healthcare assistant.
 - Serves a **FastAPI** backend and a **Streamlit** UI.
 - Optional Docker setup. Minimal CI (pytest) included.
 
-![Demo Screenshot](docs/demo1medAssistant.png)
+![Demo Screenshot](docs/Demo1MedAssistant.png)
 
 ## Quickstart (local)
 Requirements: Python 3.10+
